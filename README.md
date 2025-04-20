@@ -14,3 +14,5 @@
 ## homepage
 "## homepage - index.html: full nav, cards & footer" 
 - index.html: full nav, cards & footer" 
+## Sarah's Profile 
+- sarah.html: Sarah's full bio & skills 
