@@ -16,3 +16,6 @@
 - index.html: full nav, cards & footer" 
 ## Sarah's Profile 
 - sarah.html: Sarah's full bio & skills 
+
+## Wissem's Profile 
+- wissem.html: Wissem's full bio & skills 
