@@ -8,8 +8,20 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      # 1) Check out your code, full history, and disable persisting the
+      #    default token so that peaceiris/actions-gh-pages can use GITHUB_TOKEN
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          persist-credentials: false
 
+      # 2) Configure Git user/email so commits by the action will succeed
+      - name: Setup Git user
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      # 3) Deploy to gh-pages via peaceiris
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
