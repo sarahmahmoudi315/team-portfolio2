@@ -10,3 +10,4 @@
 ## JavaScript
 - js/script.js: starting placeholder
 "## homepage - index.html: full nav, cards & footer" 
+"## homepage - index.html: full nav, cards & footer" 
