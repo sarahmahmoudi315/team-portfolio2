@@ -9,5 +9,8 @@
 
 ## JavaScript
 - js/script.js: starting placeholder
+
+ 
+## homepage
 "## homepage - index.html: full nav, cards & footer" 
-"## homepage - index.html: full nav, cards & footer" 
+- index.html: full nav, cards & footer" 
