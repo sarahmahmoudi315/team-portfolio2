@@ -1,31 +1,17 @@
-name: CI for HTML/CSS/JS
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name:  Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v3
 
-      - name:  Validate HTML
-        uses: Cyb3r-Jak3/html5validator-action@v0.8.0
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          root: ./
-          files: '*.html'
-
-      - name:  Validate CSS
-        uses: w3c/css-validator-action@v2
-        with:
-          css-path: './css/styles.css'
-
-      - name:  Validate JS syntax
-        run: |
-          npm install -g eslint
-          eslint js/script.js || true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
