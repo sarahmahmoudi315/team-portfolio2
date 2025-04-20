@@ -6,3 +6,6 @@
 
 ## CSS
 - css/styles.css: starting placeholder
+
+## JavaScript
+- js/script.js: starting placeholder
